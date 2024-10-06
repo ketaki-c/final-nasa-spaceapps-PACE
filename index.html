@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        NASA PACE Learning Hub
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-blue-900 text-white">
+    <header class="bg-blue-900 text-white">
+        <div class="container mx-auto flex items-center justify-between py-4 px-6">
+            <div class="flex items-center">
+                <img alt="NASA PACE Logo" class="h-10 w-10" src="https://pace.oceansciences.org/images/PACE_logo_black_transparent.png" />
+                <span class="ml-3 text-xl font-bold">
+                    NASA PACE Learning Hub
+                </span>
+            </div>
+            <nav class="flex items-center space-x-6">
+                <a class="text-yellow-400" href="index.html">
+                    Home
+                </a>
+                <a class="text-white" href="teacher.html">
+                    Teachers Guide
+                </a>
+                <a class="text-white" href="interactive.html">
+                    Interactive Data
+                </a>
+                <a class="text-white" href="services.html">
+                    Program list
+                </a>
+                <a class="text-white" href="contact.html">
+                    Contact Us
+                </a>
+                <a class="text-white" href="signup.html">
+                    <i class="fas fa-user-circle"></i>
+                    Log In
+                </a>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="relative">
+        <img alt="Scuba diver underwater" class="w-full h-screen object-cover" src="https://i.natgeofe.com/n/dde3c72a-7612-451e-9796-5498d6386a04/yourshot-underwater-1869254.jpg" />
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
+            <h1 class="text-6xl font-bold text-yellow-400">
+                NASA PACE Learning Hub
+            </h1>
+            <p class="mt-4 text-xl">
+                Explore NASA's PACE mission with resources for students and teachers on oceans, atmosphere, and climate!
+            </p>
+            <button class="mt-6 px-6 py-3 bg-white text-blue-900 font-bold rounded-full">
+                NASA PACE
+            </button>
+        </div>
+    </main>
+
+    <div class="text-center py-8">
+        <h1 class="text-white text-4xl font-bold">Our Programs</h1>
+    </div>
+    
+    <div class="flex justify-center space-x-8 px-8">
+        <!-- Programme List Card -->
+        <div class="bg-cover bg-center relative w-80 h-96" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI27x12ptuLPY-zeCRzW25V7GcApl2NZg4xw&s');">
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-6">
+                <h2 class="text-white text-2xl font-bold mb-2">Programme List</h2>
+                <p class="text-white mb-4">Explore our Program List for all age groups. Find engaging resources and links to Notion pages with lesson plans and materials, helping students learn about oceans, atmosphere, and climate.</p>
+                <button class="bg-white text-blue-900 font-bold py-2 px-4 rounded-full">Explore Programs</button>
+            </div>
+        </div>
+        <!-- Interactive Data Card -->
+        <div class="bg-cover bg-center relative w-80 h-96" style="background-image: url('https://freerangestock.com/sample/139735/abstract-blurred-gradient-background--rainbow-colors--colorful.jpg');">
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-6">
+                <h2 class="text-white text-2xl font-bold mb-2">Interactive Data</h2>
+                <p class="text-white mb-4">Immerse yourself in interactive data modules that facilitate hands-on learning experiences, allowing students to engage with real-world information and draw meaningful insights.</p>
+                <button class="bg-white text-blue-900 font-bold py-2 px-4 rounded-full">Access Interactive Data</button>
+            </div>
+        </div>
+        <!-- Teacher's Guide Card -->
+        <div class="bg-cover bg-center relative w-80 h-96" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA7vzUmqLv0EoM-3QxO5wtVhl2b3zbw5ABkQ&s');">
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-6">
+                <h2 class="text-white text-2xl font-bold mb-2">Teacher’s Guide</h2>
+                <p class="text-white mb-4">This guide helps teachers use NASA PACE resources and interactive maps to engage students and teach climate science.</p>
+                <button class="bg-white text-blue-900 font-bold py-2 px-4 rounded-full">Access Guide</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Google Map Section -->
+    <section class="container mx-auto py-16">
+        <h2 class="text-center text-4xl font-bold text-yellow-400 mb-10">Discover NASA PACE Globally</h2>
+        <div id="map" class="w-full h-96 rounded-lg shadow-lg"></div>
+    </section>
+
+    <footer class="bg-blue-900 text-center py-8">
+        <p class="text-white">© 2024 NASA PACE Learning Hub. All rights reserved.</p>
+    </footer>
+
+    <!-- Google Maps API and JS -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkN-nrAJQxIA_Vm5MH67hgaaKzq6_WV9c&callback=initMap" async defer></script>
+    <script>
+        function initMap() {
+            // Create a new map centered on a specific location (e.g., NASA Headquarters)
+            const nasaHQ = { lat: 38.883, lng: -77.016 };
+            const map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: nasaHQ
+            });
+
+            // Add a marker for NASA HQ
+            new google.maps.Marker({
+                position: nasaHQ,
+                map: map,
+                title: 'NASA Headquarters'
+            });
+
+            // Add additional markers as needed for PACE-related locations
+        }
+    </script>
+
+</body>
+
+</html>

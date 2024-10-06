@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-cover bg-center" style="background-image: url('https://t4.ftcdn.net/jpg/06/03/32/67/360_F_603326788_fdZ4PaIlLj8D1LxHW1j8RepoLWvAmjw3.jpg');">
+    <header class="bg-blue-900 text-white">
+        <div class="container mx-auto flex items-center justify-between py-4 px-6">
+            <div class="flex items-center">
+                <img alt="NASA PACE Logo" class="h-10 w-10" src="https://pace.oceansciences.org/images/PACE_logo_black_transparent.png" />
+                <span class="ml-3 text-xl font-bold">
+                    NASA PACE Learning Hub
+                </span>
+            </div>
+            <nav class="flex items-center space-x-6">
+                <a class="text-yellow-400" href="index.html">
+                    Home
+                </a>
+                <a class="text-white" href="teacher.html">
+                    Teachers Guide
+                </a>
+                <a class="text-white" href="interactive.html">
+                    Interactive Data
+                </a>
+                <a class="text-white" href="services.html">
+                    Program list
+                </a>
+                <a class="text-white" href="contact.html">
+                    Contact Us
+                </a>
+                <a class="text-white" href="signup.html">
+                    <i class="fas fa-user-circle"></i>
+                    Log In
+                </a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="flex flex-col items-center justify-center min-h-screen">
+        <h1 class="text-4xl font-bold text-black mb-8">Contact Us</h1>
+        <div class="flex w-3/4 bg-opacity-75">
+            <div class="w-1/2 p-8" style="background: linear-gradient(135deg, rgba(255,255,0,0.5), rgba(255,0,0,0.5), rgba(0,0,255,0.5));">
+                <h2 class="text-white text-2xl mb-4">Get in touch with us!!!</h2>
+                <ul class="text-white text-lg mb-8">
+                    <li class="mb-2">Email</li>
+                    <li class="mb-2">Feedback</li>
+                    <li class="mb-2">Contact Form</li>
+                </ul>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-white text-2xl"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white text-2xl"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white text-2xl"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-white text-2xl"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="w-1/2 p-8 bg-black">
+                <form>
+                    <div class="mb-4">
+                        <label class="block text-white text-lg mb-2" for="name">Your Name</label>
+                        <input class="w-full p-2 border border-white bg-black text-white" type="text" id="name" name="name">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-white text-lg mb-2" for="email">Your Email</label>
+                        <input class="w-full p-2 border border-white bg-black text-white" type="email" id="email" name="email">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-white text-lg mb-2" for="subject">Subject *</label>
+                        <input class="w-full p-2 border border-white bg-black text-white" type="text" id="subject" name="subject">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-white text-lg mb-2" for="message">Message</label>
+                        <textarea class="w-full p-2 border border-white bg-black text-white" id="message" name="message" rows="4"></textarea>
+                    </div>
+                    <button class="w-full p-2 bg-white text-black text-lg">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
